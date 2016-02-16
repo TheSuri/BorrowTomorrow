@@ -1,0 +1,227 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'bootstrap-datetimepicker';
+@import 'ratings';
+
+/*********************** VARIABLES ***********************/
+
+$orange-red: #e28778;
+$belt-white: #767676; // for border
+$belt-green: #489b4a;
+$belt-blue: #4a66b5;
+$belt-red: #d14e4e;
+$belt-black: #3a3c3a;
+
+/********************  MIXINS ********************/
+
+@mixin border-radius($radius: 1px) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/*********************** INDEX ***********************/
+
+.searchContainer{
+	border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    box-sizing: border-box;
+    clear: both;
+    float: left;
+    font-size: 14px;
+    min-height: 43px;
+    padding: 10px 20px;
+    transition-duration: 0.1s;
+    transition-property: color, background-color;
+    width: 100%;
+    margin-bottom: 20px;
+    input{
+    	background: #ffffff;
+	    border: none;
+	    padding: 0;
+	    margin-left: 8px;
+	    width: 90%;
+    }
+}
+
+
+/*********************** CHECKLIST ***********************/
+
+.alert{
+	padding: 20px 0;
+}
+
+#checkListNav{
+	margin-bottom: 30px;
+	li a{
+		color: #aaaaaa;
+	}
+	li.active a{
+		color: #e28778;
+	}
+}
+
+.dropdown-menu{
+
+	.dropdown-location-label{
+		color: #999999;
+	    display: inline-block;
+	    font-size: 12px;
+	    font-weight: normal;
+	    margin: 10px 19px;
+	}
+
+	& > li > input.dropdown-zip-input{
+		display: inline-block;
+	    margin-left: 0;
+	    width: 100px;
+	}
+}
+
+#checkListBox, #pinsBox{
+	padding: 30px 0;
+	width: 90%;
+	margin: 0 auto;
+	th{
+	}
+	td.cell{
+		padding: 22px 8px;
+
+		&.options_checklist{
+			padding-left: 16px;
+		}
+	}
+}
+.bootstrap-datetimepicker-widget ul{
+	font-size: 1.0em;
+}
+
+.options_checklist{
+
+	form{
+		display: inline-block;
+	}
+	.option, a{
+		display: inline-block;
+		margin: 0 8px 7px;
+		cursor: pointer;
+	}
+
+	form:last-child{
+		margin-right: 0;
+	}
+	.glyphicon-remove{
+		color: #A94442;
+		font-size: 1em;
+	}
+}
+
+/*********************** FINISH_SIGNUP ***********************/
+
+#finishSignupBox{
+	
+}
+
+/*********************** EDIT ***********************/
+
+form{
+	label{
+		padding-top: 7px;
+	}
+}
+
+#avatarSection{
+	margin-bottom: 20px;
+	.title{
+		font-size: 13px;
+	    margin-top: 16px;
+	    font-weight: 500;
+	}
+}
+
+#summarySection{
+	padding: 0 35px;
+}
+
+#user_summary{
+	height: 200px;
+}
+
+.edit-group{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	& > .group:last-child{
+		border: none;
+	}
+	
+}
+
+#cardContainer{
+	height: 36px;
+    margin: 17px 15px;
+    text-align: center;
+    width: 100%;
+    
+	.card{
+		background: url("/images/logos/credit_card.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+		width: 55px;
+		height: 36px;
+	    display: inline-block;
+
+		&.visa{
+		 background-position: 0px 0px;
+		}
+		&.mastercard{
+		 background-position: -60px 0px;
+		}
+		&.discover{
+		 background-position: -120px 0px;
+		}
+		&.amex{
+		 background-position: -180px 0px;
+		}
+	}
+	.cardLabel{
+		font-size: 0.9em;
+		padding-top: 10px;
+		padding-right: 0;
+	}
+}
+
+
+/*********************** SHOW ***********************/
+
+#userShowBox{
+	#join_info{
+		color: #979797;
+	    font-size: 0.9em;
+	    margin-bottom: 20px;
+	}
+
+	.row.service{
+		padding: 0 30px;
+	}
+
+	.serviceWidget{
+		.serviceListItem{
+			.serviceImageContainer, .serviceImage{
+				width: 98%;
+				height: 151px;
+			}
+			.title{
+				font-size: 1.3em;
+			}
+			.headline{
+				// border-bottom: 1px solid #e6e6e6;
+			    font-weight: bold;
+			    // margin: 50px 0 0;
+			    padding-bottom: 20px;
+			    text-align: center;
+			    width: 99%;
+			}
+
+		}
+	}
+}

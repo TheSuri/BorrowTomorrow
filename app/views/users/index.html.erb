@@ -1,0 +1,48 @@
+<div class="box col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">	
+	<div class="col-sm-3">
+		<%  
+			# Data for user dashboard
+			all_users 		= User.all.count
+			total_lenders 	= User.where(lender: true).count
+			total_checks 	= UserService.where(relationship_type: 'check').count
+			total_pins 		= UserService.where(relationship_type: 'pin').count
+			data 			= { Users: all_users, Lenders: total_lenders, Checks: total_checks, Pins: total_pins } 
+		%>
+		<%= render 'shared/dashboard', { title: 'Dashboard', data: data } %>
+		<%  
+			# Data for user dashboard
+			data 			= { White: '39%', Green: '20%', Blue: '30%', Red: '10%', Black: '5%' } 
+		%>
+		<%= render 'shared/dashboard', { title: 'Rank', data: data } %>
+	</div>
+	<div class="col-sm-9">
+		<div class="title">Users</div>
+		<div class="searchContainer">
+			<span class="searchIcon glyphicon glyphicon-search icon-flipped"></span>
+			<input type="text" name="user_full_name" class="input name-input" placeholder="Enter a name, any name">
+		</div>
+		<div class="indexList-header row">
+			<%= form_for reports_path, html: { id: 'userIndexForm' } do |f| %>
+				<%= hidden_field_tag 'sort[name]' %>
+				<%= hidden_field_tag 'sort[direction]' %>
+				<!-- ID (sortable) -->
+				<div class="col-xs-1">
+					<%= render 'shared/index_headers/header_sortable', column_name: 'id', title: 'ID' %>
+				</div>
+				<!-- AVATAR -->
+				<div class="col-xs-2">Avatar</div>
+				<!-- NAME -->
+				<div class="col-xs-3">
+					<%= render 'shared/index_headers/header_sortable', column_name: 'first_name', title: 'Name' %>
+				</div>
+				<!-- LOCATION -->
+				<div class="col-xs-3">
+					<%= render 'shared/index_headers/header_sortable', column_name: 'location', title: 'Location' %>
+				</div>
+				<!-- BELT -->
+				<div class="col-xs-3">Belt</div>
+			<% end  %>
+		</div>
+		<%= render 'userList' %>
+	</div>
+</div>

@@ -1,0 +1,50 @@
+<div id="reportIndexBox" class="box col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">	
+	<!-- DASHBOARD -->
+	<div class="col-sm-3">
+		<% 
+			total 		= Report.all.count
+			pending 	= Report.where(status: 'pending').count
+			active 		= Report.where(status: 'active').count
+			resolved	= Report.where(status: 'resolved').count 
+			data 		= { Total: total, Pending: pending, Active: active, Resolved: resolved }
+		%>
+		<%= render 'shared/dashboard', { title: 'Dashboard', data: data } %>
+	</div>
+	<!-- INDEX -->
+	<div class="col-sm-9">
+		<div class="title">Reports</div>
+		<!-- INDEX HEADER -->
+		<div id="indexHeader" class="indexList-header row">
+			<%= form_for reports_path, html: { id: 'reportIndexForm' } do |f| %>
+				<%= hidden_field_tag 'sort[name]' %>
+				<%= hidden_field_tag 'sort[direction]' %>
+				<!-- ID (sortable) -->
+				<div class="col-xs-1"> 
+					<%= render 'shared/index_headers/header_sortable', column_name: 'id', title: 'ID' %>
+				</div>
+				<!-- STATUS (dropdown checkbox) -->
+				<div class="col-xs-2">
+					<%= render 'shared/index_headers/header_dropdown_checkbox' , title: 'Status', 
+																   name: 'filter_data[statuses][]', 
+																   options: Report.statuses %>
+				</div>
+				<!-- AUTHOR -->
+				<div class="col-xs-2">Author</div>
+				<!-- TYPE (dropdown checkbox) -->
+				<div class="col-xs-2">
+					<%= render 'shared/index_headers/header_dropdown_checkbox', title: 'Type',
+																  name: 'filter_data[reportable_types][]',
+																  options: {user: 'User', service: 'Service', product: 'Product', review: 'Review'} %>
+				</div>
+				<!-- TITLE -->
+				<div class="col-xs-3">Title</div>
+				<!-- LAST UPDATE (sortable) -->
+				<div class="col-xs-2">
+					<%= render 'shared/index_headers/header_sortable', column_name: 'updated_at', title: 'Last Update' %>
+				</div>
+			<% end %>
+		</div>
+		<!-- INDEX LIST -->
+		<%= render 'report_list' %>	
+	</div>
+</div>

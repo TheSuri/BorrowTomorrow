@@ -1,0 +1,6 @@
+<%= link_to('', pin_service_path(service, user_id: current_user.id ), 
+				method: :post,
+				remote: true,
+				class: "option pin tooltip_target glyphicon glyphicon-pushpin", 
+				data: { toggle: 'tooltip' }, 
+				title: 'Pin For Later')  %>

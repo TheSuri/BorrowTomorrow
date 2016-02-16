@@ -1,0 +1,152 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000/",
+  "resourcePath": "reviews",
+  "apis": [
+    {
+      "path": "users/{id}/review",
+      "operations": [
+        {
+          "summary": "Creates a new review",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Lender ID",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "author_id",
+              "type": "integer",
+              "description": "Author ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "review[title]",
+              "type": "string",
+              "description": "Title",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "review[summary]",
+              "type": "string",
+              "description": "Summary",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "review[stars]",
+              "type": "string",
+              "description": "Stars",
+              "required": true
+            }
+          ],
+          "method": "post",
+          "nickname": "Reviews#create"
+        }
+      ]
+    },
+    {
+      "path": "reviews",
+      "operations": [
+        {
+          "summary": "Shows a list of reviews",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "integer",
+              "description": "Page Number",
+              "required": false
+            }
+          ],
+          "method": "get",
+          "nickname": "Reviews#index"
+        }
+      ]
+    },
+    {
+      "path": "reviews",
+      "operations": [
+        {
+          "summary": "Creates a new review",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "author_id",
+              "type": "integer",
+              "description": "Author ID",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "review[title]",
+              "type": "string",
+              "description": "Title",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "review[summary]",
+              "type": "string",
+              "description": "Summary",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "review[stars]",
+              "type": "string",
+              "description": "Stars",
+              "required": true
+            }
+          ],
+          "method": "post",
+          "nickname": "Reviews#create"
+        }
+      ]
+    },
+    {
+      "path": "reviews/{id}",
+      "operations": [
+        {
+          "summary": "Shows an individual review",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Review ID",
+              "required": true
+            }
+          ],
+          "method": "get",
+          "nickname": "Reviews#show"
+        }
+      ]
+    },
+    {
+      "path": "reviews/{id}",
+      "operations": [
+        {
+          "summary": "Destroy an existing review",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Review ID",
+              "required": true
+            }
+          ],
+          "method": "delete",
+          "nickname": "Reviews#destroy"
+        }
+      ]
+    }
+  ]
+}

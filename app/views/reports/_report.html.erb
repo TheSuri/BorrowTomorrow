@@ -1,0 +1,24 @@
+<div class="indexList row">
+	<div class="col-xs-1 cell">
+		<div class="text"><%= link_to report.id, edit_report_path(report) %></div>
+	</div>
+	<div class="col-xs-2 cell">
+		<div class="status-icon <%= report.status %> tooltip_target" title="<%= report.status.capitalize %>"></div>
+	</div>
+	<div class="col-xs-2 cell">
+		<%= link_to report.author do %>
+			<%= image_tag report.author.main_img(:thumb), class: 'thumbImage tooltip_target', data: { toggle: 'tooltip' }, title: report.author.name %>
+		<% end %>
+	</div>
+	<%= link_to edit_report_path(report) do %>
+		<div class="col-xs-2 cell">
+			<div class="text"><%= report.reportable_type %></div>
+		</div>
+		<div class="col-xs-3 cell">
+			<div class="text"><%= report.summary %></div>
+		</div>
+		<div class="col-xs-2 cell">
+			<div class="text"><%= time_ago_in_words(report.updated_at) %> ago</div>
+		</div>
+	<% end %>
+</div>

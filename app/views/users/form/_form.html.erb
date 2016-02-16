@@ -1,0 +1,142 @@
+<div class="row">
+	<%= form_for @user, html: {multipart: true, autocomplete: 'off', class: 'form-horizontal'} do |f| %>
+  	<%= render 'shared/error_messages', object: f.object  %>
+		<!-- AVATAR  -->
+        <%= render 'users/form/avatar_section', f: f %>
+		<!-- AVATAR  -->
+		<div class="col-xs-12">
+			<!-- BASIC INFO  -->
+			<div id="basicSection" class="edit-group col-md-6">
+				<div class="detailTitle">
+					<span class="glyphicon glyphicon-user"></span>
+					<span>Basic Info</span>
+				</div>
+				<div id="userName" class="group col-xs-12">
+					<div class="col-md-4 col-sm-5">
+						<%= f.label 'Name' %>
+					</div>
+					<div class="col-md-8 col-sm-7">
+						<%= f.text_field :first_name, value: @user.first_name, placeholder: 'James', required: true, class: 'pull-left form-control', style: "margin: 0 10px 15px 0;" %>
+						<%= f.text_field :last_name, value: @user.last_name, placeholder:'Smith', required: true, class: 'pull-left form-control', style: "margin-bottom: 15px;" %>
+					</div>
+				</div>
+				<div id="headline" class="group col-xs-12">
+					<div class="col-md-4 col-sm-5">
+						<%= f.label 'Headline' %>						
+					</div>
+					<div class="col-md-8 col-sm-7">
+						<%= f.text_area :headline, value: @user.headline, placeholder: 'Dabbling Musician, Veteran Software Developer, Recent Graduate', class: 'form-control' %>
+					</div>
+				</div>
+			</div>
+			<!-- BASIC INFO  -->
+			<!-- LOCATION -->
+            <%= render 'users/form/location_section', f: f, finish_signup: false %>
+			<!-- LOCATION -->
+		</div>
+		<div class="col-xs-12">
+			<!-- CONTACT  -->
+			<div id="contactSection" class="col-md-6 edit-group">
+				<div class="detailTitle">						
+					<span class="glyphicon glyphicon-phone"></span>
+					<span>Contact</span>
+				</div>
+				<%
+				label = f.label 'Phone'
+				input = f.text_field :phone, value: @user.phone, placeholder: '415-891-2051', required: true, class: 'form-control'
+				%>
+				<%= row label,input %>
+					<%
+				label = f.label 'Email'
+				input = f.text_field :email, value: @user.email, placeholder: 'ben@lendojo.com', required: true, class: 'form-control'
+				%>
+				<%= row label,input %>
+			</div>
+			<!-- CONTACT  -->
+			<!-- SUMMARY -->
+			<div id="summarySection" class="col-md-6 edit-group">
+				<div class="detailTitle">
+					<span class="glyphicon glyphicon-align-left"></span>
+					<span>Summary</span>
+				</div>
+				<div class="detailBody">
+					<%= f.text_area :summary, value: @user.summary, placeholder: 'A little bit about me...', class: 'form-control' %>
+				</div>
+			</div>
+		</div>
+		<!-- SUMMARY -->		
+		<div class="col-xs-12">
+			<% # Object is the filler text for submit button %>
+			<%= f.submit 'Update Info', class: 'button center' %>
+		</div>
+	<% end %>
+</div>
+
+<div class="row col-xs-12">
+	<div class="sectionTitle">Account</div>
+</div>
+
+<div class="row col-xs-12">
+	<!-- CARD -->
+	<div id="ccSection" class="edit-group col-sm-6">
+		<div class="detailTitle">
+			<span class="glyphicon glyphicon-usd"></span>
+			<span>Card</span>
+		</div>
+		<% if !current_user.stripe_customer_id.nil? %>
+			<% customer = Stripe::Customer.retrieve(current_user.stripe_customer_id) %>
+			<% card = customer.cards.data[0] %>
+			<div id="cardContainer">
+				<div class="card <%= card.type.downcase %> col-xs-4"></div> 
+				<div class="cardLabel col-xs-6"> <%= "#{card.type.capitalize} ending in #{card.last4}" %> </div> 
+				<div class="cardLabel col-xs-2"><%= link_to('Change', '#', id: "showUpdateCardForm") unless card.nil? %></div>
+			</div>
+		<% end %>
+		<%= form_for @user, html: { autocomplete: 'off',  id: 'update_card', class: 'form-horizontal' }, url: { action: 'update_card' } do |f| %>
+			<div class="error"></div>
+			<%
+				label = label_tag 'cc_number', 'CC Number'
+				input = text_field_tag :number, nil, placeholder: "5200828282828210", required: true, class: 'form-control'
+			%>
+			<%= row label,input %>
+			<%
+				label = label_tag 'cvc', 'CVC'
+				input = text_field_tag :cvc, nil, placeholder: "256", required: true, class: 'form-control'
+			%>
+			<%= row label,input %>
+			<%
+				label = label_tag 'Expiration'
+				input =  select_month(Date.today, {add_month_number: true}, {name: 'exp_month', id: 'exp_month'}) + select_year(Date.today, {start_year:Date.today.year, end_year:Date.today.year + 15}, {name: 'exp_year',  id: 'exp_year'})
+			%>
+			<%= row label,input %>
+			<div class="col-xs-12">
+				<%= f.submit 'Update card', class: "button center", style: "margin-top: 20px;" %>
+			</div>
+		<% end %>
+	</div>		
+	<!-- CARD -->
+	<!-- PASSWORD -->
+	<div id="passwordSection" class="edit-group col-md-6">
+		<%= form_for @user, html: {autocomplete: 'off', class: 'form-horizontal'} do |f| %>
+	  	<%= render 'shared/error_messages', object: f.object  %>
+			<div class="detailTitle">
+				<span class="glyphicon glyphicon-cog"></span>
+				<span>Password</span>
+			</div>
+			<%
+			label = f.label 'New Password'
+			input = f.password_field :password, required: true, class: 'form-control'
+			%>
+			<%= row label,input %>
+			<%
+			label = f.label 'Confirm Password'
+			input = f.password_field :password_confirmation, required: true, class: 'form-control'
+			%>
+			<%= row label,input %>
+			<div class="col-xs-12">
+				<%= f.submit 'update password', class: "button center", style: "margin-top: 60px;" %>
+			</div>
+		<% end %>
+	</div>
+	<!-- PASSWORD -->
+</div>

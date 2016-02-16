@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lendojo</title>
+	<%= stylesheet_link_tag    "application", params[:controller] ,media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "https://js.stripe.com/v2/", params[:controller] ,"data-turbolinks-track" => true %>
+	<%= yield :head %>
+	<%= csrf_meta_tags %>
+	<%= tag :meta, name: 'strip_key', content: STRIPE_PUBLIC_KEY %>
+</head>
+<body>
+	<div class="siteWrap">
+	  	<%= render 'layouts/header' %>
+	  	<!--  FLASH MESSAGES -->
+		<% flash.each do |key, value| %>
+			<%= content_tag :div, value, class:"alert alert-#{key}" %>
+		<% end %>
+		<div class="container">
+			<%= yield %>
+		</div>
+	  	<%= render 'layouts/footer' %>
+		<div style="clear: both; padding-top: 20px;">
+			<%= debug params %>
+		</div>
+	</div>
+</body>
+</html>

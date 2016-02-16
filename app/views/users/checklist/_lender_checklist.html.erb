@@ -1,0 +1,20 @@
+<!-- LENDER CHECKLIST -->
+<div id="lenderPane" class="checkList tab-pane fade in active">
+	<table class="table table-striped">
+		<thead>
+			<th class="cell"></th>
+			<th class="cell">Status</th>
+			<th class="cell">Service</th>
+			<th class="cell">Date</th>
+			<th class="cell">Place</th>
+			<th class="cell">Price</th>
+		</thead>
+		<tbody>
+			<% @lender_checkList.each do |n| %>
+				<%= render '/users/checklist/lender_cl_item', checklist_item: n %>
+			<% end %>
+		</tbody>
+	</table>
+
+	<%= will_paginate @lender_checkList, param_name: 'lender_page' %>
+</div>

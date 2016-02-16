@@ -1,0 +1,6 @@
+<%= link_to('', unpin_service_path(service, user_id: current_user.id), 
+				remote: true,
+				method: :delete,
+				class: "option unpin tooltip_target glyphicon glyphicon-minus",  
+				data: { toggle: 'tooltip' }, 
+				title: "Unpin")  %>

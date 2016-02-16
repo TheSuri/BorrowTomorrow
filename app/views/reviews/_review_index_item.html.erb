@@ -1,0 +1,25 @@
+<div class="indexList review-index-item row">
+	<div class="col-xs-1 cell">
+		<div class="text"><%= link_to review.id, review %></div>
+	</div>
+	<div class="col-xs-2 cell">
+		<%= link_to review.author do %>
+			<%= image_tag review.author.main_img(:thumb), class: 'thumbImage tooltip_target', data: { toggle: 'tooltip' }, title: review.author.name %>
+		<% end %>
+	</div>
+	<div class="col-xs-2 cell">
+		<%= link_to review.lender do %>
+			<%= image_tag review.lender.main_img(:thumb), class: 'thumbImage tooltip_target', data: { toggle: 'tooltip' }, title: review.lender.name %>
+		<% end %>
+	</div>
+	<div class="col-xs-3 cell">
+		<%= link_to review do %>
+			<div class="text">
+				<div class="raty" data-stars="<%= review.stars %>"></div>
+			</div>
+		<% end %>
+	</div>
+	<div class="col-xs-3 cell">
+		<div class="text"><%= time_ago_in_words(review.created_at) %> ago</div>
+	</div>
+</div>
