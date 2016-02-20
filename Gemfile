@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.2.3'
 #ruby-gemset=railstutorial_rails_4_0
 
+gem 'puma'
 gem 'rails', '4.1.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem "autoprefixer-rails"
