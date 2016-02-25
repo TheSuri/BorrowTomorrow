@@ -1,0 +1,12 @@
+# Sample configuration for Redmine Rails installation
+ option_settings:
+ 	- option_name: BUNDLE_WITHOUT
+	value: "test:development"
+	- option_name: RACK_ENV
+	value: production
+packages:
+	yum:
+		git: []
+container_commands:
+	01_secret:
+		command: rake generate_secret_token
