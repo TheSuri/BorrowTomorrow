@@ -185,7 +185,7 @@ ActiveRecord::Schema.define(version: 20140619184735) do
     t.integer  "lender_id"
     t.integer  "lendee_id"
     t.integer  "service_id"
-    t.string   "relationship_type"
+    t.integer  "relationship_type", default: 0
     t.integer  "status",            default: 0
     t.datetime "date"
     t.string   "address"
