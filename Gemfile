@@ -62,7 +62,7 @@ gem 'roadie', '~> 3.0.0'
 gem 'roadie-rails', '~> 1.0.2'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.8'
+  gem 'sqlite3', '1.3.11'
   gem 'rspec-rails', '2.13.1'
   gem 'hirb', '0.7.1'
   gem 'annotate', ">=2.6.0"
