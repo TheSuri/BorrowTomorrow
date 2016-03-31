@@ -30,6 +30,7 @@ $belt-green: #489b4a;
 $belt-blue: #4a66b5;
 $belt-red: #d14e4e;
 $belt-black: #3a3c3a;
+$bt-red: #B6224D;
 
 /********************  MIXINS ********************/
 
@@ -77,12 +78,12 @@ header{
     overflow: inherit;
     width: 100%;
     z-index: 100;
-    border-bottom: 10px solid #f59e8f;
+    border-bottom: 10px solid $bt-red;
 }
 
 #be_a_lender{
 	color: #FFFFFF;
-	background: #f2c846;
+	background: $bt-red;
 	padding: 10px 20px;
 	text-transform: uppercase;
 	@include border-radius(5px);
@@ -511,7 +512,7 @@ button::-moz-focus-inner, .nav-tabs > .active > a, .nav-tabs > .active > a:hover
 }
 
 .button{
-	background: $gold;
+	background: $bt-red;
 	font-size: 18px;
     margin-top: 30px;
     padding: 8px 35px;
@@ -531,7 +532,7 @@ button::-moz-focus-inner, .nav-tabs > .active > a, .nav-tabs > .active > a:hover
     }
     &:hover{
     	// For links
-    	background: #F0C951;
+    	background: red;
     	color: #FFFFFF;
     	text-decoration: none;
     	// background: #dcac2f;
