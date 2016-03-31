@@ -3017,3 +3017,835 @@ Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 
 
 
 Started GET "/assets/logo.png" for 127.0.0.1 at 2016-03-30 18:48:10 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-30 18:49:24 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-30 18:49:24 -0700
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/form/_avatar_section.html.erb (9.1ms)
+  Rendered users/form/_location_section.html.erb (11.0ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/form/_form.html.erb (47.3ms)
+  Rendered users/edit.html.erb within layouts/application (49.8ms)
+  Rendered layouts/_header.html.erb (7.1ms)
+  Rendered layouts/_footer.html.erb (3.2ms)
+Completed 200 OK in 136ms (Views: 104.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/date.format.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2016-03-30 18:58:09 -0700
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2016-03-30 19:06:06 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/form/_avatar_section.html.erb (7.2ms)
+  Rendered users/form/_location_section.html.erb (14.9ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/form/_form.html.erb (51.5ms)
+  Rendered users/edit.html.erb within layouts/application (54.5ms)
+  Rendered layouts/_header.html.erb (9.9ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 137ms (Views: 111.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/date.format.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2016-03-30 19:06:07 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-30 19:08:52 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-30 19:08:52 -0700
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2016-03-30 19:09:16 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/form/_avatar_section.html.erb (2.2ms)
+  Rendered users/form/_location_section.html.erb (5.6ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/form/_form.html.erb (22.9ms)
+  Rendered users/edit.html.erb within layouts/application (24.6ms)
+  Rendered layouts/_header.html.erb (6.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 3113ms (Views: 3109.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/form/_avatar_section.html.erb (1.8ms)
+  Rendered users/form/_location_section.html.erb (3.9ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/form/_form.html.erb (18.0ms)
+  Rendered users/edit.html.erb within layouts/application (19.1ms)
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/date.format.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-30 19:09:19 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2016-03-30 19:09:20 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2016-03-30 19:09:20 -0700
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2016-03-30 19:10:45 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_error_messages.html.erb (0.2ms)
+  Rendered users/form/_avatar_section.html.erb (7.8ms)
+  Rendered users/form/_location_section.html.erb (14.4ms)
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered users/form/_form.html.erb (55.1ms)
+  Rendered users/edit.html.erb within layouts/application (58.0ms)
+  Rendered layouts/_header.html.erb (7.2ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 3181ms (Views: 3169.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/date.format.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2016-03-30 19:10:48 -0700
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2016-03-30 19:11:02 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/form/_avatar_section.html.erb (1.9ms)
+  Rendered users/form/_location_section.html.erb (4.5ms)
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/form/_form.html.erb (19.9ms)
+  Rendered users/edit.html.erb within layouts/application (21.4ms)
+  Rendered layouts/_header.html.erb (7.6ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 2845ms (Views: 2841.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/date.format.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2016-03-30 19:11:05 -0700
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/form/_avatar_section.html.erb (1.9ms)
+  Rendered users/form/_location_section.html.erb (8.3ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/form/_form.html.erb (38.9ms)
+  Rendered users/edit.html.erb within layouts/application (40.1ms)
+  Rendered layouts/_header.html.erb (6.3ms)
+  Rendered layouts/_footer.html.erb (2.5ms)
+Completed 200 OK in 79ms (Views: 75.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/date.format.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2016-03-30 19:11:06 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-30 19:11:32 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-30 19:11:32 -0700
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2016-03-30 19:12:00 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/form/_avatar_section.html.erb (7.3ms)
+  Rendered users/form/_location_section.html.erb (11.1ms)
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/form/_form.html.erb (46.2ms)
+  Rendered users/edit.html.erb within layouts/application (50.6ms)
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 2828ms (Views: 2808.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/moment.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/date.format.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/ratings.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2016-03-30 19:12:03 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-30 19:12:08 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (3.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://0.0.0.0:3000/services
+Completed 302 Found in 7ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFilter Load (0.2ms)[0m  SELECT  "filters".* FROM "filters"  WHERE "filters"."user_id" = ?  ORDER BY "filters"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE (category = 'location')  ORDER BY count DESC LIMIT 5[0m
+  [1m[35mTag Load (0.3ms)[0m  SELECT  "tags".* FROM "tags"  WHERE (category = 'keyword')  ORDER BY count DESC LIMIT 5
+  [1m[36mFilter Load (0.2ms)[0m  [1mSELECT "filters".* FROM "filters"  WHERE "filters"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered services/filter/_my_filter_list.html.erb (1.3ms)
+  Rendered services/_filter.html.erb (6.4ms)
+  [1m[35mService Load (0.3ms)[0m  SELECT  "services".* FROM "services"  LIMIT 9 OFFSET 0
+  Rendered collection (0.0ms)
+  Rendered services/_service_list.html.erb (1.8ms)
+  Rendered services/index.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_header.html.erb (8.0ms)
+  Rendered layouts/_footer.html.erb (4.0ms)
+Completed 200 OK in 81ms (Views: 73.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/services
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+Processing by ServicesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFilter Load (0.1ms)[0m  [1mSELECT  "filters".* FROM "filters"  WHERE "filters"."user_id" = ?  ORDER BY "filters"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags"  WHERE (category = 'location')  ORDER BY count DESC LIMIT 5
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE (category = 'keyword')  ORDER BY count DESC LIMIT 5[0m
+  [1m[35mFilter Load (0.1ms)[0m  SELECT "filters".* FROM "filters"  WHERE "filters"."user_id" = ?  [["user_id", 1]]
+  Rendered services/filter/_my_filter_list.html.erb (0.6ms)
+  Rendered services/_filter.html.erb (2.8ms)
+  [1m[36mService Load (0.2ms)[0m  [1mSELECT  "services".* FROM "services"  LIMIT 9 OFFSET 0[0m
+  Rendered collection (0.0ms)
+  Rendered services/_service_list.html.erb (0.7ms)
+  Rendered services/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/services.css?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/jquery.raty.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2016-03-30 19:12:09 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2016-03-30 19:12:09 -0700

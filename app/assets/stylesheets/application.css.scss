@@ -31,6 +31,8 @@ $belt-blue: #4a66b5;
 $belt-red: #d14e4e;
 $belt-black: #3a3c3a;
 $bt-red: #B6224D;
+$bt-blue: #14A1CC;
+$bt-button-hover: #098BB2;
 
 /********************  MIXINS ********************/
 
@@ -91,7 +93,7 @@ header{
 	top: 40px;
 	left: 60px;
 	&:hover{
-		background: $gold-hover;
+		background: $bt-button-hover;
 	}
 }
 
@@ -532,7 +534,7 @@ button::-moz-focus-inner, .nav-tabs > .active > a, .nav-tabs > .active > a:hover
     }
     &:hover{
     	// For links
-    	background: red;
+    	background: $bt-button-hover;
     	color: #FFFFFF;
     	text-decoration: none;
     	// background: #dcac2f;
@@ -875,7 +877,7 @@ footer{
 		margin-bottom: 15px;
 		.footer-link{
 				border-right: 1px solid #cbcbcb;
-				color: #e28778;
+				color: $bt-blue;
 				display: inline-block;
 				font-size: 0.8em;
 				text-align: center;
