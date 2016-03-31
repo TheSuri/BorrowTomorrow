@@ -142,13 +142,13 @@ header{
 	& > a{
 		margin: 0 5px;
 		&#signInIcon{
-			background: none repeat scroll 0 0 #f2c846;
+			background: none repeat scroll 0 0 $bt-red;
 		    color: white;
 		    padding: 9px 20px;
 		    text-transform: uppercase;
 			@include border-radius(5px);
 			&:hover{
-				background: $gold-hover;
+				background: $bt-button-hover;
 			}
 		}
 		&.signedInIcon{
