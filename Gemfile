@@ -14,7 +14,8 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 
 # Style
-gem 'bootstrap-sass', '~> 3.1.1.1'
+
+gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'font-awesome-rails', '~> 4.1.0.0'
 
 # Populate DB for Testing
