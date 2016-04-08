@@ -6,13 +6,13 @@ class LenderApplicationsMailer < ActionMailer::Base
 	include Roadie::Rails::Automatic
 	
 	# Mail defaults
-	default from: "Lendojo <staff@lendojo.com>"
+	default from: "BorrowTomorrow <staff@BorrowTomorrow.com>"
 
 	# Mail when lender application is created
 	def created(lenderApp)
-		admin_email = 'bennettl@usc.edu'
+		admin_email = 'gsuri@usc.edu'
 		@lenderApp 	= lenderApp
-		subject 	= 'Lendojo: New Lender Application'
+		subject 	= 'BorrowTomorrow: New Lender Application'
 
 		mail(to: admin_email, subject: subject) do |format|
 			format.html { render 'created' }
@@ -27,9 +27,9 @@ class LenderApplicationsMailer < ActionMailer::Base
 
 		# Change the subject base on @lenderApp status
 		if @lenderApp.approved?
-			subject = "Lendojo: Lender Application Approved!"
+			subject = "BorrowTomorrow: Lender Application Approved!"
 	 	elsif @lenderApp.denied?
-			subject = "Lendojo: Lender Application Denied"
+			subject = "BorrowTomorrow: Lender Application Denied"
 		end
 
 		mail(to: @author.email, subject: subject) do |format|

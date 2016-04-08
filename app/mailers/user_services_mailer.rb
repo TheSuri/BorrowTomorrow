@@ -7,7 +7,7 @@ class UserServicesMailer < ActionMailer::Base
 	
 	include Rails.application.routes.url_helpers
 
-	default from: "Lendojo <staff@lendojo.com>"
+	default from: "BorrowTomorrow <staff@borrowtomorrow.com>"
 	
 	# Mail when a user service 'check' status is updated
 	def check_updated(user_service)
@@ -18,16 +18,16 @@ class UserServicesMailer < ActionMailer::Base
 		# Change the to and subject base on @user_service status
 		if @user_service.pending?
 			to 		= @user_service.lender.email
-			subject = "Lendojo: #{@user_service.lendee.first_name} Checked Your Service!"
+			subject = "BorrowTomorrow: #{@user_service.lendee.first_name} Checked Your Service!"
 		elsif @user_service.schedule_unconfirm?
-			subject = "Lendojo: Please Confirm Schedule Date and Place"
+			subject = "BorrowTomorrow: Please Confirm Schedule Date and Place"
 			to 		= @user_service.lendee.email
 		elsif @user_service.schedule_confirmed?
 			to 		= @user_service.lender.email
-			subject = "Lendojo: #{@user_service.lendee.first_name} Has Confirmed"
+			subject = "BorrowTomorrow: #{@user_service.lendee.first_name} Has Confirmed"
 		elsif @user_service.complete?
 			to 		= @user_service.lender.email
-			subject = "Lendojo: Service Complete!"
+			subject = "BorrowTomorrow: Service Complete!"
 		end
 
 		# Create the mail object

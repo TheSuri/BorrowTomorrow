@@ -5,7 +5,7 @@ class UserStatusMailer < ActionMailer::Base
 	# Automatically inject css styles
 	include Roadie::Rails::Automatic
 
-	default from: "Lendojo <staff@lendojo.com>"
+	default from: "BorrowTomorrow <staff@BorrowTomorrow.com>"
 
 	# Mail when a user status is updated
 	def set_mail(user)
@@ -14,15 +14,15 @@ class UserStatusMailer < ActionMailer::Base
 
 		case @user.status
 			when User.statuses[:inactive]
-				subject = "Lendojo: Activate Your Account"
+				subject = "BorrowTomorrow: Activate Your Account"
 			when User.statuses[:active]
-				subject = "Lendojo: Your Account Has Been Activated"
+				subject = "BorrowTomorrow: Your Account Has Been Activated"
 			when User.statuses[:warned]
-				subject = "Lendojo: Warning"
+				subject = "BorrowTomorrow: Warning"
 			when User.statuses[:suspended]
-				subject = "Lendojo: Your Account Has Been Suspended"
+				subject = "BorrowTomorrow: Your Account Has Been Suspended"
 			when User.statuses[:banned]
-				subject = "Lendojo: Your Account Has Been Banned"
+				subject = "BorrowTomorrow: Your Account Has Been Banned"
 		end
 
 		mail(to: @user.email, subject: subject) do |format|

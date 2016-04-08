@@ -5,13 +5,13 @@ class MiscMailer < ActionMailer::Base
 	# Automatically inject css styles
 	include Roadie::Rails::Mailer
 
-	default to: "bennettlee908@gmail.com"
+	default to: "neilsuri17@gmail.com"
 
-	# Mail when user contacts Lendojo staff
+	# Mail when user contacts BorrowTomorrow staff
 	def contact(params)
 		@name 			= params[:name]
 		@category		= params[:category] #General Questions, Technical Questions, Suggestions, Business Inquiries, Media, Other
-		to				=  "bennettlee908@gmail.com"
+		to				=  "neilsuri17@gmail.com"
 		from 			= @name + "<" + params[:email_from] + ">"
 		@message 		= params[:message]
 
