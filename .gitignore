@@ -6,3 +6,4 @@
 .ebextensions/
 log/
 tmp/
+public/assets/**
