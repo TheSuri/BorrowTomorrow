@@ -65,7 +65,7 @@ Rails.application.configure do
   #config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   #config.assets.precompile += %w( *.scss *.js )
   #config.assets.precompile += %w( '.woff', '.eot', '.svg', '.ttf' )
-  config.assets.precompile += %w( '*.css.scss' )
+  #config.assets.precompile += %w( '*.css.scss' )
    
 
   # Ignore bad email addresses and do not raise email delivery errors.
