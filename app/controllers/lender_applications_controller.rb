@@ -76,7 +76,7 @@ class LenderApplicationsController < ApplicationController
 		if @lenderApp.save
 			flash[:success] = "Thanks for the application! We will get back to you shortly."
 			# Notify admin that a new application has been submitted
-			LenderApplicationsMailer.created(@lenderApp).deliver
+			#LenderApplicationsMailer.created(@lenderApp).deliver
 			
 			# Respond to multiple formats
 			respond_to do |format|
