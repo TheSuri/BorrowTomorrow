@@ -6,7 +6,7 @@ class LenderApplicationsMailer < ActionMailer::Base
 	include Roadie::Rails::Automatic
 	
 	# Mail defaults
-	default from: "BorrowTomorrow <staff@BorrowTomorrow.com>"
+	default from: "BorrowTomorrow <staff@borrowtomorrow.io>"
 
 	# Mail when lender application is created
 	def created(lenderApp)

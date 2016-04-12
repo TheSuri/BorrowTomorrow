@@ -7,7 +7,7 @@ class UserServicesMailer < ActionMailer::Base
 	
 	include Rails.application.routes.url_helpers
 
-	default from: "BorrowTomorrow <staff@borrowtomorrow.com>"
+	default from: "BorrowTomorrow <staff@borrowtomorrow.io>"
 	
 	# Mail when a user service 'check' status is updated
 	def check_updated(user_service)
