@@ -11,7 +11,6 @@ class LenderApplication < ActiveRecord::Base
 	################################## VALIDATION ##################################
 
 	validates :keyword, presence: true
-	validates :skill, presence: true
 	validates :hours, presence: true, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 168 } # 168 hours in a week
 	validates :summary, presence: true
 

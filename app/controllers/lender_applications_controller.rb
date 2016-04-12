@@ -64,7 +64,6 @@ class LenderApplicationsController < ApplicationController
 		summary "Create a new lender application"
 		param :query, 'author_id', :integer, :required, "Author ID"
 		param :form, 'lender_application[categories]', :string, :required, "Categories"
-		param :form, 'lender_application[skill]', :string, :required, "Skill"
 		param :form, 'lender_application[hours]', :integer, :required, "Hours"
 		param :form, 'lender_application[summary]', :string, :required, "Summary"
 	end
@@ -104,7 +103,6 @@ class LenderApplicationsController < ApplicationController
 		summary "Update an existing lender application"
 		param :path, 		'id', 								:integer, :required, "Application ID"
 		param :form, 		'lender_application[categories]', 	:string,  :optional, "Categories"
-		param :form, 		'lender_application[skill]', 		:string,  :optional, "Skill"
 		param :form, 		'lender_application[hours]', 		:integer, :optional, "Hours"
 		param :form, 		'lender_application[summary]', 		:string,  :optional, "Summary"
 		param_list :form, 	'lender_application[status]', 		:status,  :optional, "Status", LenderApplication.statuses.keys
@@ -160,7 +158,7 @@ class LenderApplicationsController < ApplicationController
 
 	# Strong parameters
 	def lender_application_params
-		params.require(:lender_application).permit(:keyword, :skill, :hours, :summary, :status, :staff_notes)
+		params.require(:lender_application).permit(:keyword, :hours, :summary, :status, :staff_notes)
 	end
 
 end
