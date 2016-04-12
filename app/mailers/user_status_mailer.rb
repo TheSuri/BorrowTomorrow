@@ -5,7 +5,7 @@ class UserStatusMailer < ActionMailer::Base
 	# Automatically inject css styles
 	include Roadie::Rails::Automatic
 
-	default from: "BorrowTomorrow <staff@borrowtomorrow.io>"
+	default from: "BorrowTomorrow <staff@borrowtomorrow.herokuapp.com>"
 
 	# Mail when a user status is updated
 	def set_mail(user)
