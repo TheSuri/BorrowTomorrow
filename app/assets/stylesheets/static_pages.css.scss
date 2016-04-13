@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+* {
+    box-sizing: border-box;
+}
 #revisionBlurb{
     margin-top: 30px;
     text-align: right;
@@ -28,14 +31,62 @@
     margin: 0 auto;
     min-height: 300px;
     padding: 10px 30px;
-    text-align: center;
+    font-size: 25px;
     width: 524px;
+    text-align: left;
+    font-style: Albert Pro;
     .title{
         margin-bottom: 0;
     }
 }
 .backgroundgif {
     background: url('http://media.giphy.com/media/LPBYImbgzsKpG/giphy.gif') no-repeat center center;
+}
+
+.backgroundgif2 {
+    background: url('https://giant.gfycat.com/LikelyIncredibleAppaloosa.gif') no-repeat center center;
+    /*background-size: cover;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    position: fixed;
+    display: block;
+    left: 0;
+    z-index: 1;
+    height: 500px; 
+    padding-left: 0; 
+    padding-right: 0; 
+    position: fixed;*/
+    background-size: cover;
+    display: block;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    height: 800px;
+    width: 100vw;
+    /*position: fixed;*/
+    z-index: 1;
+}
+
+.description {
+    /*top: 10px;
+    left: 0;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    right: 0;
+    z-index: 2;
+    padding: 0 10px;*/
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    top: -700px;
+    left: 0;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    right: 0;
+    z-index: 2;
+    padding: 0 10px;
+    font-color: white;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
 }
 
 /******************************* FAQs *******************************/
