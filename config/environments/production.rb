@@ -2,7 +2,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   
   # URL Path for mailer
-  config.action_mailer.default_url_options = { host: 'BorrowTomorrow.com' }
+  config.action_mailer.default_url_options = { host: 'borrowtomorrow.herokuapp.com' }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -65,7 +65,7 @@ Rails.application.configure do
   #config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   #config.assets.precompile += %w( *.scss *.js )
   #config.assets.precompile += %w( '.woff', '.eot', '.svg', '.ttf' )
-  config.assets.precompile += %w( '*.css.scss' )
+  #config.assets.precompile += %w( '*.css.scss' )
    
 
   # Ignore bad email addresses and do not raise email delivery errors.
