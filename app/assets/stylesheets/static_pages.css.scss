@@ -17,8 +17,7 @@
 
 #home{
 	background: url("/images/about.jpg") no-repeat scroll 0 0 / cover #ffffff;
-    min-height: 550px;
-    height: 60%;
+    height: 100%;
     width: 100vw;
     position: relative;
 
@@ -30,10 +29,10 @@
 
 #aboutBlurb{
     margin: 0 auto;
-    min-height: 300px;
+    min-height: 500px;
     padding: 10px 30px;
     font-size: 25px;
-    width: 524px;
+    /*width: 524px;*/
     text-align: left;
     font-style: Albert Pro;
     .title{
@@ -110,9 +109,15 @@
     min-height: 0;
 }
 
+@font-face {
+    font-family: Bebas;
+    src: url(BebasNeue\ Regular.otf);
+}
+
 .subTitle{
-    font-size: 1.3em;
+    font-size: 1.8em;
     text-transform: uppercase;
-    margin-bottom: 10px;
-    font-weight: 300;       
+    font-weight: 300; 
+    font-family: Bebas;
+    letter-spacing: 2px;
 }
