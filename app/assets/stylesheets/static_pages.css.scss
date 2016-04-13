@@ -15,6 +15,11 @@
     width: 100%;
 }
 
+@font-face {
+    font-family: Bebas;
+    src: url(BebasNeue\ Regular.otf);
+}
+
 #home{
 	background: url("/images/about.jpg") no-repeat scroll 0 0 / cover #ffffff;
     height: 100%;
@@ -75,7 +80,9 @@
     right: 0;
     z-index: 2;
     padding: 0 10px;*/
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
+    font-family: Bebas;
+    font-size: 1.5em;
     top: -700px;
     left: 0;
     position: relative;
@@ -109,15 +116,11 @@
     min-height: 0;
 }
 
-@font-face {
-    font-family: Bebas;
-    src: url(BebasNeue\ Regular.otf);
-}
-
 .subTitle{
     font-size: 1.8em;
     text-transform: uppercase;
     font-weight: 300; 
     font-family: Bebas;
+    color: #003366;
     letter-spacing: 2px;
 }
