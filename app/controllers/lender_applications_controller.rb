@@ -57,6 +57,7 @@ class LenderApplicationsController < ApplicationController
 	# Displays a form for 
 	def new
 		@lenderApp = LenderApplication.new
+		#@lenderApp.status = approved;
 	end
 
 	# Creates a new lender application
@@ -70,13 +71,23 @@ class LenderApplicationsController < ApplicationController
 	def create
 		user 		= User.find_by(id: params[:author_id])
 		@lenderApp 	= user.build_lender_app(lender_application_params)
-
+		#@lenderApp.status = "approved";
 		# If a new lenderApp is sucessfully save, redirect ot services index path, else re-render new
 		if @lenderApp.save
 			flash[:success] = "Thanks for the application! We will get back to you shortly."
 			# Notify admin that a new application has been submitted
 			#LenderApplicationsMailer.created(@lenderApp).deliver
-			
+			user.services.create!(title: "Create", 
+										headline: "Headline", 
+										summary: "Test", 
+										location: "1278 bitch street",
+										address: "1279 Bitch street",
+										city: "Los Angeles",
+										state: "CA",
+										zip: "90007",
+										price: "20",
+										category: "Video games", 
+										tags: "Tag me, bitch" )
 			# Respond to multiple formats
 			respond_to do |format|
 			    format.html { redirect_to services_path }
