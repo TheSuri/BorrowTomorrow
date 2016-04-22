@@ -15,10 +15,14 @@
     width: 100%;
 }
 
+@font-face {
+    font-family: Bebas;
+    src: url(BebasNeue\ Regular.otf);
+}
+
 #home{
 	background: url("/images/about.jpg") no-repeat scroll 0 0 / cover #ffffff;
-    min-height: 550px;
-    height: 60%;
+    height: 100%;
     width: 100vw;
     position: relative;
 
@@ -30,10 +34,10 @@
 
 #aboutBlurb{
     margin: 0 auto;
-    min-height: 300px;
+    min-height: 500px;
     padding: 10px 30px;
     font-size: 25px;
-    width: 524px;
+    /*width: 524px;*/
     text-align: left;
     font-style: Albert Pro;
     .title{
@@ -67,6 +71,19 @@
     z-index: 1;
 }
 
+
+@media screen and (max-width: 800px) {
+    .backgroundgif2 {
+        height: 1000px;
+    }
+    #aboutBlurb {
+    }
+    .description {
+        margin-top: 30%;
+        font-size: 1em;
+    }
+}
+
 .description {
     /*top: 10px;
     left: 0;
@@ -76,16 +93,16 @@
     right: 0;
     z-index: 2;
     padding: 0 10px;*/
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
+    font-family: Bebas;
+    font-size: 1.5em;
+    letter-spacing: 2px;
     top: -700px;
-    left: 0;
     position: relative;
-    margin-left: 20px;
-    margin-right: 20px;
-    right: 0;
+    text-align: center;
     z-index: 2;
-    padding: 0 10px;
     font-color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     filter: blur(0px);
     -webkit-filter: blur(0px);
 }
@@ -111,8 +128,10 @@
 }
 
 .subTitle{
-    font-size: 1.3em;
+    font-size: 1.8em;
     text-transform: uppercase;
-    margin-bottom: 10px;
-    font-weight: 300;       
+    font-weight: 300; 
+    font-family: Bebas;
+    color: #003366;
+    letter-spacing: 2px;
 }
