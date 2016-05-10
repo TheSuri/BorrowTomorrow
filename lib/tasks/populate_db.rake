@@ -76,25 +76,25 @@ namespace :db do
 
 	# Populate services and attach ratings/reviews to them
 	def populate_services
-		users 	= User.limit(5)
+		users 	= User.limit(40)
 		switch	= true
 
 		# Loop through each user
 		users.each do |u|
 			# Each user will create 8 services
-			15.times do |n|
+			1.times do
 				service_hash 	= random_service_hash
-				title 			= "#{n} " + service_hash[:desc][:title]
+				title 			= service_hash[:desc][:title]
 				headline 		= service_hash[:desc][:headline]
-				summary 		= Faker::Lorem.paragraphs(5).join("\n\n")
-				price 			= service_hash[:price]
+				summary 		= "This is a summary"
+				price 			= [*10..200].sample
 				category 		= service_hash[:desc][:category]
 				tags 			= service_hash[:desc][:tag]
-				location 		= service_hash[:location]
-				address 		= Faker::Address.street_address
-				state 			= Faker::Address.state_abbr
-				city			= Faker::Address.city
-				zip 			= Faker::Address.zip_code
+				location 		= "USC"
+				address 		= "711 W 27th Street"
+				state 			= "CA"
+				city			= "Los Angeles"
+				zip 			= 90007
 				
 				# Create the service
 				u.services.create!(title: title, 
@@ -122,9 +122,9 @@ namespace :db do
 	# Populate filter data for the first User
 	def populate_filters
 		user = User.first
-		user.filters.create(title: 'USC Music', data: { location: ['USC', 'Los Angeles'], price: ['$', '$$'], keyword: ['guitar', 'piano'] } )
-		user.filters.create(title: 'San Francisco Services', data: { location: ['San Francisco', 'Silicon Valley'], price: ['$$', '$$$'] } )
-		user.filters.create(title: 'Cheap Pet Services', data: { location: ['Venice', 'Los Angeles'], price: ['$', '$$'], keyword: ['pets'] } )
+		#user.filters.create(title: 'USC Music', data: { location: ['USC', 'Los Angeles'], price: ['$', '$$'], keyword: ['guitar', 'piano'] } )
+		#user.filters.create(title: 'San Francisco Services', data: { location: ['San Francisco', 'Silicon Valley'], price: ['$$', '$$$'] } )
+		#user.filters.create(title: 'Cheap Pet Services', data: { location: ['Venice', 'Los Angeles'], price: ['$', '$$'], keyword: ['pets'] } )
 	end
 
 	# Populate user services relationships (checks/pins)
