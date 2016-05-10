@@ -78,20 +78,65 @@ namespace :db do
 	def populate_services
 		users 	= User.limit(40)
 		switch	= true
+		i = 0;
+
+		desc = [
+			{title: "Red Dragon Camera", 	headline: "Great Camera", 		summary: "Really nice camera... I paid alot of money"},
+			{title: "Pencil", 				headline: "Great for exams", 	summary: "I write with this"},
+			{title: "Playstation 4", headline: "PS4", summary: "Play the best games you can"},
+			{title: "Apple Mouse", headline: "Solid mouse", summary: "for rent over summer"},	
+			{title: "Beats Solos", headline: "Beats Solos", summary: "for those lokoing for sick music"},	
+			{title: "FireWire Sci-fi Surfboard", headline: "SURF'S UP", summary: "Retail $770"},	
+			{title: "30 monitor" , headline: "1080p", summary: "ASUS monitor"},	
+			{title: "FarCry 3", headline: "FarCry 3", summary: "XBox 360"},	
+			{title: "Fitbit", headline: "Fitness Tracker", summary: "Don't listen to the stocks..."},	
+			{title: "iPod Nano 7th gen", headline: "iPod Nano", summary: "Listen to music"},	
+			{title: "Galaxy S6", headline: "Samsung", summary: "Barely used, lightly scratched"},	
+			{title: "Bedding", headline: "Bedding", summary: "Pillows and Blankets"},	
+			{title: "Camping equipment", headline: "For campers", summary: "Tent not included"},	
+			{title: "Sennheiser HD 280", headline: "Audiophiles Necessary", summary: "For audiophiles"},	
+			{title: "Clark's", headline: "Dress Shoes", summary: "Size 9 Dress shoes"},	
+			{title: "Box of Tissues", headline: "Tissues", summary: "Not a serious post, sorry brian"},	
+			{title: "Hair dryer", headline: "hair dryer", summary: "works fine, lightly used"},	
+			{title: "Duster", headline: "Air duster", summary: "To dust out your computers"},	
+			{title: "CRT Television", headline: "CRT TV", summary: "CRT in solid condition. Great for smash players"},	
+			{title: "Netflix Account", headline: "Netflix", summary: "For those looking to chill."},	
+			{title: "Six Flags Cup", headline: "Six Flags Cup", summary: "Unlimited Drinks at six flags"},	
+			{title: "Party Lights", headline: "Great lights for party", summary: "Party it up!!!"},	
+			{title: "Black light", headline: "Black light", summary: "gives off cool party vibe"},	
+			{title: "Macbook Charger", headline: "Macbook Charger", summary: "Older charger. Magsafe 1"},	
+			{title: "40 inch TV" , headline: "Samsung 40 inch", summary: "Television for sale."},
+			{title: "Nikon D3300", headline: "DSLR", summary: "solid camera gear"},	
+			{title: "Razer Deathaddr", headline: "Gaming Mouse", summary: "6000 DPI sensor"},	
+			{title: "Apple Keyboard", headline: "Solid keyboard", summary: "not much to say..."},	
+			{title: "Chromecast", headline: "Chromecast", summary: "Stream to Apple TV"},	
+			{title: "Samsung tv", headline: "28 inch LCD TV", summary: "Good television set"},
+			{title: "call of duty aw", headline: "cod aw", summary: "For Ps4 contact"},
+			{title: "call of duty 4", headline: "cod4", summary: "For ps3. contact me"},
+			{title: "Melee", headline: "Melee", summary: "Nostalgia on gamecube"},
+			{title: "surge protector", headline: "Surge protector", summary: "protect electronics"},
+			{title: "iPhone charger", headline: "iPhone Charger", summary: "thunderbolt"},
+			{title: "bicycle", headline: "Bicycle", summary: "for rent"},
+			{title: "Guitar Lessons", headline: "Guitar Lessons", summary: "Experienced for 10 years. Hmu, and I'll teach you the ropes."},
+			{title: "Keyboard", headline: "Razer", summary: "Gaming keyboard"},
+			{title: "Dress pants", headline: "Dress pants", summary: "30-30"},
+			{title: "Speakers", headline: "Stereo Speakers", summary: "Great for parties"},
+		]
+
 
 		# Loop through each user
 		users.each do |u|
 			# Each user will create 8 services
 			1.times do
-				service_hash 	= random_service_hash
-				title 			= service_hash[:desc][:title]
-				headline 		= service_hash[:desc][:headline]
-				summary 		= "This is a summary"
+				title 			= desc[i % desc.size][:title]
+				headline 		= desc[i % desc.size][:headline]
+				summary 		= desc[i % desc.size][:summary]
+				i = i + 1
 				price 			= [*10..200].sample
-				category 		= service_hash[:desc][:category]
-				tags 			= service_hash[:desc][:tag]
+				category 		= "Stuff"
+				tags 			= "Give me more stuff"
 				location 		= "USC"
-				address 		= "711 W 27th Street"
+				address 		= "711 W. 27th Street"
 				state 			= "CA"
 				city			= "Los Angeles"
 				zip 			= 90007
@@ -109,12 +154,6 @@ namespace :db do
 										category: category, 
 										tags: tags )
 				# Every other service will get 5 reviews and ratings
-				if switch
-					review_lender(u)
-					switch = false
-				else
-					switch = true
-				end
 			end
 		end
 	end
