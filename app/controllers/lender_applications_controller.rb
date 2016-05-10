@@ -77,17 +77,6 @@ class LenderApplicationsController < ApplicationController
 			flash[:success] = "Thanks for the application! We will get back to you shortly."
 			# Notify admin that a new application has been submitted
 			#LenderApplicationsMailer.created(@lenderApp).deliver
-			user.services.create!(title: "Create", 
-										headline: "Headline", 
-										summary: "Test", 
-										location: "1278 bitch street",
-										address: "1279 Bitch street",
-										city: "Los Angeles",
-										state: "CA",
-										zip: "90007",
-										price: "20",
-										category: "Video games", 
-										tags: "Tag me, bitch" )
 			# Respond to multiple formats
 			respond_to do |format|
 			    format.html { redirect_to services_path }
